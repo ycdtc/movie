@@ -15,6 +15,7 @@ function getRequest() {
 
 function drawPie(chart,value,name){
 	var can = document.getElementById(chart);
+	$(can).empty();
 	var ctx = can.getContext("2d");
 	var start = 0;
 	var end = 0;

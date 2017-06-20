@@ -8,13 +8,12 @@
 <body>
 12312
 <button id="abc">Abc</button>
-<div id = "chart"> </div>
+<canvas id="can1" height="600" width="800"></canvas>
 </body>
 <script>
 	$("#abc").click(function(e){
 		//location.href = "hr.html?id=123"
-		$("#chart").empty();		
-		$("<canvas id=\"can1\" height=\"600\" width=\"800\"></canvas>").appendTo($("#chart"));
+		$("#can1").empty();
 		drawPie("can1",[10,20,30],["market","human resource","finance"]);
 	});
 	

@@ -1,6 +1,7 @@
 /**
  * 
  */
+
 var colors = ["red","orange","green","blue","purple","black"];
 function getRequest() {   
 	var url = location.search;
@@ -14,7 +15,6 @@ function getRequest() {
 
 function drawPie(chart,value,name){
 	var can = document.getElementById(chart);
-	
 	var ctx = can.getContext("2d");
 	var start = 0;
 	var end = 0;
@@ -42,9 +42,8 @@ function drawPie(chart,value,name){
 		end += value[i]/sum * 2 * Math.PI;
 		ctx.rotate(now + (end-start)/2);
 		now = (end-start)/2;
-		ctx.font = "20px";
+		ctx.font = "24px";
 		ctx.fillStyle = "white";
 		ctx.fillText(name[i], 60 , 0);
-	}	
-	ctx.rotate(-Math.PI/6);
+	}
 }
