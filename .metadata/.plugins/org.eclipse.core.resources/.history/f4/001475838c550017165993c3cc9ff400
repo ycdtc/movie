@@ -13,7 +13,7 @@
 <script>
 	$("#abc").click(function(e){
 		//location.href = "hr.html?id=123"
-		drawPie("can1",[10,20,30],["market","human resource","finance"]);
+		drawPie("can1",[10,20,30],["abc","123","666"]);
 	});
 	
 	

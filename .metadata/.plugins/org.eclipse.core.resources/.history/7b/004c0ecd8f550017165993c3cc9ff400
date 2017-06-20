@@ -1,7 +1,7 @@
 /**
  * 
  */
-var colors = ["red","orange","green","blue","purple","black"];
+var colors = ["red","orange","yellow","green","blue","purple","black"];
 function getRequest() {   
 	var url = location.search;
 	var paras = url.substr(1).split("&");
@@ -42,9 +42,9 @@ function drawPie(chart,value,name){
 		end += value[i]/sum * 2 * Math.PI;
 		ctx.rotate(now + (end-start)/2);
 		now = (end-start)/2;
-		ctx.font = "20px";
+		//ctx.font = "25px scans-serif";
 		ctx.fillStyle = "white";
-		ctx.fillText(name[i], 60 , 0);
+		ctx.fillText(name[i], 40 , 0);
 	}	
 	ctx.rotate(-Math.PI/6);
 }
