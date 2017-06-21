@@ -1,6 +1,8 @@
 /**
  * 
  */
+
+var colors = ["red","orange","green","blue","purple","black"];
 function getRequest() {   
 	var url = location.search;
 	var paras = url.substr(1).split("&");
@@ -11,7 +13,7 @@ function getRequest() {
 	return res;
 }  
 
-function drawPie(chart,name,value){
+function drawPie(chart,value,name){
 	var can = document.getElementById(chart);
 	var ctx = can.getContext("2d");
 	var start = 0;
@@ -23,16 +25,25 @@ function drawPie(chart,name,value){
 	}
 	for(var i=0;i<value.length;i++){
 		start = end;
-		end += nums[i]/sum * pi;
+		end += value[i]/sum * 2 * Math.PI;
+		ctx.fillStyle = colors[i];
 		ctx.beginPath();
 		ctx.moveTo(0,0);
 		ctx.arc(0,0,200,start,end);
-		ctx.lineTo(0,0);
+		ctx.closePath();
 		ctx.stroke();
 		ctx.fill();
 	}
-	
+	start = 0;
+	end = 0;
+	var now = 0 ;
 	for(var i=0;i<value.length;i++){
-		
-	}	
+		start = end;
+		end += value[i]/sum * 2 * Math.PI;
+		ctx.rotate(now + (end-start)/2);
+		now = (end-start)/2;
+		ctx.font = "24px";
+		ctx.fillStyle = "white";
+		ctx.fillText(name[i], 60 , 0);
+	}
 }

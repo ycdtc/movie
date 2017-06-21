@@ -1,0 +1,24 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="javascript/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/base.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+12312
+<button id="abc">Abc</button>
+<div id = "chart"> </div>
+</body>
+<script>
+	$("#abc").click(function(e){
+		//location.href = "hr.html?id=123"
+		$("#chart").empty();		
+		$("<canvas id=\"can1\" height=\"600\" width=\"800\"></canvas>").appendTo($("#chart"));
+		//drawPie("can1",[10,20,30],["market","human resource","finance"]);
+		drawLine("can1",[1000,1200,500,800,600,700],[1,2,3,4,5,6]);
+	});
+	
+	
+</script>
+</html>
