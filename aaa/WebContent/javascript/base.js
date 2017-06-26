@@ -54,7 +54,7 @@ function drawLine(chart,value,name,key){
     var cw = canvas.width;
     var ch = canvas.height;
     var padding = 80;
-    
+    console.log("draw");
     var origin = {x:padding,y:ch-padding};
     var bottomRight = {x:cw-padding,y:ch-padding};
     var topLeft = {x:padding,y:padding};
