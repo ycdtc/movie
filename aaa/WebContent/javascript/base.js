@@ -58,6 +58,7 @@ function drawLine(chart,value,name,key){
     var origin = {x:padding,y:ch-padding};
     var bottomRight = {x:cw-padding,y:ch-padding};
     var topLeft = {x:padding,y:padding};
+    
     //X
     ctx.beginPath();
     ctx.moveTo(origin.x,origin.y);
@@ -82,7 +83,7 @@ function drawLine(chart,value,name,key){
     var max = Math.max.apply(null,value.join(",").split(","));
     var avgValue=Math.floor(max/5);
     var avgHeight = (ch-padding*2-50)/5;
-    for(var i=0;i<key.length;i++){
+    for(var i=0;i<=5;i++){
     	if(i>0){
             ctx.moveTo(origin.x,origin.y-i*avgHeight);
             ctx.lineTo(origin.x+10,origin.y-i*avgHeight);
@@ -115,56 +116,56 @@ function drawLine(chart,value,name,key){
     }	
 }
 
-function drawRect(){
-    var ocanvas = document.getElementById("can1");  
-    var mycanvas = ocanvas.getContext("2d");  
-    var arr = [60,90,150,130,170,190,125,175,155,165,155,145];  
-  
-    //第一先定义一个画线的函数方法    画两条线  
-    function line(aX,aY,bX,bY) {//开始和结束的横坐标  开始和结束的纵坐标  
-        mycanvas.beginPath();  
-        mycanvas.moveTo(aX,aY);  
-        mycanvas.lineTo(bX,bY);  
-        mycanvas.stroke();  
+function drawRect(chart,value,key){
+    var canvas = document.getElementById(chart);  
+    var ctx = canvas.getContext("2d");
+    var cw = canvas.width;
+    var ch = canvas.height;
+    var padding = 80;
+    
+    var origin = {x:padding,y:ch-padding};
+    var bottomRight = {x:cw-padding,y:ch-padding};
+    var topLeft = {x:padding,y:padding};
+    
+    //X
+    ctx.beginPath();
+    ctx.moveTo(origin.x,origin.y);
+    ctx.lineTo(bottomRight.x,bottomRight.y);
+    //Y
+    ctx.moveTo(origin.x,origin.y);
+    ctx.lineTo(topLeft.x,topLeft.y);
+    
+    ctx.font = '16px SimHei';
+    
+    //绘制Y方向刻度
+    var max = Math.max.apply(null,value);
+    console.log(max);
+    var avgValue=Math.floor(max/5);
+    var avgHeight = (ch-padding*2-50)/5;
+    for(var i=0;i<=5;i++){
+    	if(i>0){
+            ctx.moveTo(origin.x,origin.y-i*avgHeight);
+            ctx.lineTo(origin.x+10,origin.y-i*avgHeight);
+    	}
+        var txtWidth = ctx.measureText(avgValue*i).width;
+        ctx.fillText(avgValue*i,origin.x-txtWidth-5,origin.y-i*avgHeight+6);
+    }
+    ctx.stroke();
+    
+    //绘制X方向刻度
+    var avgWidth = (cw - 2*padding - 50)/(key.length);
+    for(var i=0;i<key.length;i++){
+        var txtWidth = ctx.measureText(key[i]).width;
+        ctx.fillText(key[i],origin.x+(i+1)*avgWidth-txtWidth/2,origin.y+32);
+    }
+    
+    for(var i=0;i<value.length;i++){    
+    	var height = value[i]/max*(ch-2*padding-50);
+        ctx.beginPath();  
+        ctx.fillStyle="#abcdef";  
+        ctx.rect(origin.x+(i+0.9)*avgWidth,origin.y-height,avgWidth/10,height);  
+        ctx.fill();  
+        ctx.closePath();  
     }  
-    line(300,80,300,480);  
-    line(900,80,900,480);  
-  
-    //第二用for循环 画11条线   利用上面line的画线方法  
-    for(var i=0;i<11;i++){  
-       //300,80,900,80  
-        //300,120,900,120  
-       line(300,80+i*40,900,80+i*40);  
-        write(200-i*20,280,80+i*40)  
-  
-    }  
-    //第三定义一个矩形的函数方法  
-    function rect(X,Y,width,height) {  
-        mycanvas.beginPath();  
-        mycanvas.fillStyle="#abcdef";  
-        mycanvas.rect(X,Y,width,height);  
-        mycanvas.fill();  
-        mycanvas.closePath()  
-    }  
-  
-    //第四定义一个方法  定义矩形的具体变量以及高引入数组  
-    function wenrect() {  
-        for(var i=0;i<12;i++){  
-            var width=30;  
-            var height=arr[i]*2;  
-            var X=310+i*40+i*10;  
-            var Y=480-height;  
-            rect(X,Y,width,height);  
-            write((i+1)+"月",320+i*40+i*10,500)  
-        }  
-    }  
-    wenrect();  
-  
-    //添加字  
-    function write(start,ox,oy) {  
-        mycanvas.beginPath();  
-        mycanvas.fillStyle = "black";  
-        mycanvas.fillText(start,ox,oy);  
-        mycanvas.closePath();  
-    }  
+    
 }
