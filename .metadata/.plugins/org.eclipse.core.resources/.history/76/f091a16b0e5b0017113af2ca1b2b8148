@@ -169,23 +169,3 @@ function drawRect(chart,value,key){
     }  
     
 }
-
-function dbAdd(path,data){
-	var fs, ts, s ; 
-	//read 1 write 2 add 8
-	fs = new ActiveXObject("Scripting.FileSystemObject"); 
-	file = fs.OpenTextFile(path, 8 ,true); 
-	file.writeLine(data);
-}
-
-function dbRemove(){
-	
-}
-
-function dbSearch(){
-	
-}
-
-function dbChange(){
-	
-}

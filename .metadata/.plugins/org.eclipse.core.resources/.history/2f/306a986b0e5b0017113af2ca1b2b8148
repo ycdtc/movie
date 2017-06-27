@@ -19,7 +19,6 @@
 		//drawPie("can1",[10,20,30,25],["market","human resource","finance","sales"]);
 		drawLine("can1",[[1000,1200,500,800,600,700],[1200,500,800,600,700,900]],["market","human resources"],[1,2,3,4,5,6]);
 		//drawRect("can1",[10,20,30,40],["market","human resource","finance","sales"]);
-		dbAdd("D:/a.txt","abcdefg");
 	});
 	
 	
