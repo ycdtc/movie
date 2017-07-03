@@ -171,22 +171,107 @@ function drawRect(chart,value,key){
 }
 
 function dbAdd(path,data){
-	var fs, ts, s ; 
+	var fs; 
 	//read 1 write 2 add 8
-	fs = new ActiveXObject("Scripting.FileSystemObject"); 
-	file = fs.OpenTextFile(path, 8 ,true); 
-	file.writeLine(data);
-	
+	fs = new ActiveXObject("Scripting.FileSystemObject");
+	file = fs.openTextFile(path, 1);
+	while(!file.atEndOfStream){
+		if(file.readLine() == JSON.stringify(data)){
+			return 1;
+		}
+	}
+	file.close();
+	file = fs.OpenTextFile(path, 8); 
+	file.writeLine(JSON.stringify(data));
+	file.close();
+	return 0;
 }
 
-function dbRemove(){
-	
+function dbRemove(path,data){
+	var fs; 
+	//read 1 write 2 add 8
+	fs = new ActiveXObject("Scripting.FileSystemObject");
+	file = fs.openTextFile(path, 1);
+	var s = "";
+	while(!file.atEndOfStream){
+		var flag = 0;
+		var line = file.readLine();
+//		if(line == ""){
+//			continue;
+//		}
+		for(var key in data){
+			if(JSON.parse(line)[key] != data[key]){
+				flag = 1;
+			}
+		}
+		if(flag == 1){
+			s += line + "\r\n";
+		}
+	}
+	file.close();
+	file = fs.OpenTextFile(path, 2);
+	console.log(s);
+	file.write(s.substring(0,s.length-2));
+	file.close();
+	return 0;
 }
 
-function dbSearch(){
-	
+function dbSearch(path,data){
+	var fs; 
+	//read 1 write 2 add 8
+	fs = new ActiveXObject("Scripting.FileSystemObject");
+	file = fs.openTextFile(path, 1);
+	var res = [];
+	while(!file.atEndOfStream){
+		var flag = 0;
+		var line = file.readLine();
+//		if(line == ""){
+//			continue;
+//		}
+		for(var key in data){
+			if(JSON.parse(line)[key] != data[key]){
+				flag = 1;
+			}
+		}
+		if(flag == 0){
+			res.push(JSON.parse(line));
+		}
+	}
+	file.close();
+	return res;
 }
 
-function dbChange(){
-	
+function dbUpdate(path,data,newdata){
+	var fs; 
+	//read 1 write 2 add 8
+	fs = new ActiveXObject("Scripting.FileSystemObject");
+	file = fs.openTextFile(path, 1);
+	var s = "";
+	while(!file.atEndOfStream){
+		var flag = 0;
+		var line = file.readLine();
+//		if(line == ""){
+//			continue;
+//		}
+		for(var key in data){
+			if(JSON.parse(line)[key] != data[key]){
+				flag = 1;
+			}
+		}
+		if(flag == 1){
+			s += line + "\r\n";
+		}else{
+			var json = JSON.parse(line);
+			for(var key in newdata){
+				json[key] = newdata[key];
+			}
+			s += JSON.stringify(json) + "\r\n";
+		}
+	}
+	file.close();
+	file = fs.OpenTextFile(path, 2);
+	console.log(s);
+	file.write(s.substring(0,s.length-2));
+	file.close();
+	return 0;
 }

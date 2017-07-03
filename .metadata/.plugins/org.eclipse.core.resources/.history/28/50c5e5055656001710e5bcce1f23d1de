@@ -1,5 +1,0 @@
-@CHARSET "UTF-8";
-chart{
-	width:1000;
-	height:800;
-}

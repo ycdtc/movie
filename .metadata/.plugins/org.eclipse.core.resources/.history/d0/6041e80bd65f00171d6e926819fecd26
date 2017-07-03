@@ -1,0 +1,52 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css" />
+<link rel="stylesheet" href="stylesheet/index.css" />
+<title>Insert title here</title>
+</head>
+<body>
+12312
+<button id="abc">Abc</button>
+<div id = "chart"> </div>
+    <table id="ta">
+        <tr>
+            <th></th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+        </tr>
+        <tr>
+            <td>万籁寂无声</td>
+            <td>衾铁棱棱近五更</td>
+            <td>香断灯昏吟未稳</td>
+            <td>凄清</td>
+            <td>只有霜华伴月明</td>
+        </tr>
+        <tr>
+            <td>应是夜寒凝</td>
+            <td>恼得梅花睡不成</td>
+            <td>我念梅花花念我</td>
+            <td>关情</td>
+            <td>起看清冰满玉瓶</td>
+        </tr>
+    </table>
+    <br/>
+    <input type="button" value="导出EXCEL" onclick="method1('ta')" />
+</body>
+<script>
+	$("#abc").click(function(e){
+		//location.href = "hr.html?id=123"
+		$("#chart").empty();		
+		$("<canvas id=\"can1\" height=\"600\" width=\"800\"></canvas>").appendTo($("#chart"));
+		//drawPie("can1",[10,20,30,25],["market","human resource","finance","sales"]);
+		drawLine("can1",[[1000,1200,500,800,600,700],[1200,500,800,600,700,900]],["market","human resources"],[1,2,3,4,5,6]);
+		//drawRect("can1",[10,20,30,40],["market","human resource","finance","sales"]);
+		console.log(JSON.stringify(dbSearch("D:/data/user.txt",{"username":"123","password":"1234"})[0]));
+	});
+	
+	
+</script>
+</html>

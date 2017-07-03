@@ -1,7 +1,0 @@
-@CHARSET "UTF-8";
-chart{
-	border: 1px solid black;
-    width: 960px;
-    height: 720px;
-    margin:auto 0;
-}
