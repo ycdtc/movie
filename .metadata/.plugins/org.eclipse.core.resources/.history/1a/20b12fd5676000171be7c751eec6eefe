@@ -1,24 +1,22 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!DOCTYPE html><html><head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="javascript/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="javascript/base.js"></script>
 <link rel="stylesheet" href="stylesheet/base.css" />
 <link rel="stylesheet" href="stylesheet/index.css" />
 <title>Insert title here</title>
 </head>
 <body>
-12312
-<button id="abc">Abc</button>
-<div id = "chart"> </div>
+<h1>Welcome</h1>
+<input id="username" type="text" placeholder = "username"/>
+<input id="password" type="password" placeholder = "password"/>
+<button id="submit">submit</button>
 </body>
 <script>
-	$("#abc").click(function(e){
-		//location.href = "hr.html?id=123"
-		$("#chart").empty();		
-		$("<canvas id=\"can1\" height=\"600\" width=\"800\"></canvas>").appendTo($("#chart"));
-		//drawPie("can1",[10,20,30,25],["market","human resource","finance","sales"]);
-		drawLine("can1",[[1000,1200,500,800,600,700],[1200,500,800,600,700,900]],["market","human resources"],[1,2,3,4,5,6]);
-		//drawRect("can1",[10,20,30,40],["market","human resource","finance","sales"]);
+	$("#submit").click(function(e){
+		if($("#username").val() == "hr"){
+			location.href = "aaa/hr";
+		}
 	});
 	
 	

@@ -8,23 +8,13 @@
 </head>
 <body>
 <h1>Welcome</h1>
-<input id="username" type="text" placeholder = "username"/>
-<input id="password" type="password" placeholder = "password"/>
-<button id="submit">submit</button>
+<input type="text" placeholder = "abc"/>
+<input type="password" />
+<button>submit</button>
 </body>
 <script>
-	$("#submit").click(function(e){
-		if($("#username").val() == "hr"){
-			location.href = "hr.html";
-		}else if($("#username").val() == "market"){
-			location.href = "market.html";
-		}else if($("#username").val() == "sales"){
-			location.href = "sales.html";
-		}else if($("#username").val() == "finance"){
-			location.href = "finance.html";
-		}else{
-			location.href = "control.html";
-		}
+	$("#abc").click(function(e){
+		
 	});
 	
 	

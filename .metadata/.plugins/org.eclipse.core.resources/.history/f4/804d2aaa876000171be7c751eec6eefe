@@ -15,15 +15,7 @@
 <script>
 	$("#submit").click(function(e){
 		if($("#username").val() == "hr"){
-			location.href = "hr.html";
-		}else if($("#username").val() == "market"){
-			location.href = "market.html";
-		}else if($("#username").val() == "sales"){
-			location.href = "sales.html";
-		}else if($("#username").val() == "finance"){
-			location.href = "finance.html";
-		}else{
-			location.href = "control.html";
+			location.href = "hr";
 		}
 	});
 	
