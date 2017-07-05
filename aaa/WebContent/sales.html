@@ -22,10 +22,23 @@ $("#seecomment").click(function(){
 });
 
 $("#schedulemovie").click(function(){
-	//dbGetValue(path, key)
-	//$("#res").append($("<select id='select'></select>"));
-	//$("#select").click(function())
-	add();
+	var brands = dbGetValue("D:\data\roominfo.txt", "brand");
+	brands = ["123","456"];
+	for(var i=0;i<brands.length;i++)
+		console.log(brands[i]);
+	$("#res").append($("<select id='select'></select>"));
+	$("#select").append($("<option selected='selected' disabled='disabled'>" +"</option>"));
+	for(var i=0;i<brands.length;i++){
+		$("#select").append($("<option>" + brands[i] +"</option>"));
+	}
+	$("#select").change(function(){
+		var brand = $("#select option:selected").html();
+		var rooms = dbGetValue("D:\data\roominfo.txt", "room");
+		
+		
+	})
+	
+	//add();
 });
 
 </script>
