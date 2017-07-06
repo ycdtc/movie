@@ -182,7 +182,7 @@ function dbAdd(path,data){
 	}
 	file.close();
 	file = fs.OpenTextFile(path, 8); 
-	file.writeLine(JSON.stringify(data));
+	file.write("\r\n" + JSON.stringify(data));
 	file.close();
 	return 0;
 }
@@ -228,6 +228,7 @@ function dbSearch(path,data){
 //		if(line == ""){
 //			continue;
 //		}
+		console.log(line);
 		for(var key in data){
 			if(JSON.parse(line)[key] != data[key]){
 				flag = 1;
@@ -276,30 +277,32 @@ function dbUpdate(path,data,newdata){
 	return 0;
 }
 
-function dbGetValue(path,key) {
+function dbGetValue(path,key,criteria) {
+	criteria = criteria || {};
 	var res = [];
-	var find = dbSearch(path, {});
+	var find = dbSearch(path, criteria);
 	for(var i=0;i<find.length;i++){
-		if(!$.inArray(find[i][key],res)){
+		if($.inArray(find[i][key],res) == -1){
 			res.push(find[i][key]);
 		}
 	}
-	return res.sort();
+	res.sort();
+	return res;
 }
 
 function add(){
 	fs = new ActiveXObject("Scripting.FileSystemObject");
-	file = fs.openTextFile("D:/data/roominfo.txt", 2);
+	file = fs.openTextFile("d:/data/roominfo.txt", 2);
 	var brands = ["Zhangjiang","Global harbor","Zhongshan Park","East Nanjing Road"];
 	var rooms = ["Room1","Room2","Room3"];
 	var seats = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 	var movie = ["Despicable Me 3","Spider-Man","Transformers","War of the Planet of the Apes"];
-	var times = ["9:00-11:00","1:00-3:00","3:00-5:00","7:00-9:00"];
+	var times = ["9:00-11:00","13:00-15:00","15:00-17:00","19:00-21:00"];
 	var i = 0;
 	for ( var brand in brands) {
 		for(var room in rooms){
 			for(var time in times){
-				var json = {"brand":brands[brand], "room":rooms[room],"seats":seats,"time":times[time],"movie":movie[i%movie.length],"price":35};
+				var json = {"brand":brands[brand], "room":rooms[room],"seats":seats,"time":times[time],"movie":movie[i%movie.length],"price":"35"};
 				file.writeLine(JSON.stringify(json));
 				i++;
 			}

@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;aaa/WebContent/pictures&apos; to &apos;movietoshow&apos;" description="Rename resource &apos;pictures&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/pictures" name="movietoshow" stamp="1499241543260" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;aaa/WebContent/pictures&apos; to &apos;movietoshow&apos;" description="Rename resource &apos;pictures&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/pictures" name="movietoshow" stamp="1499241543260" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;aaa/WebContent/movietoshow&apos; to &apos;movie&apos;" description="Rename resource &apos;movietoshow&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/movietoshow" name="movie" stamp="1499325681560" updateReferences="true"/>
 </session>
