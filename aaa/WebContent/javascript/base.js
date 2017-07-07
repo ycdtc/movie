@@ -36,7 +36,7 @@ function drawPie(chart,value,name){
 	}
 	start = 0;
 	end = 0;
-	var now = 0 ;
+	var now = 0;
 	for(var i=0;i<value.length;i++){
 		start = end;
 		end += value[i]/sum * 2 * Math.PI;
@@ -54,7 +54,6 @@ function drawLine(chart,value,name,key){
     var cw = canvas.width;
     var ch = canvas.height;
     var padding = 80;
-    console.log("draw");
     var origin = {x:padding,y:ch-padding};
     var bottomRight = {x:cw-padding,y:ch-padding};
     var topLeft = {x:padding,y:padding};
@@ -68,7 +67,8 @@ function drawLine(chart,value,name,key){
     ctx.lineTo(topLeft.x,topLeft.y);
 
     ctx.font = '16px SimHei';
-    
+    var text = key[0].substring(0,key[0].lastIndexOf('/')+1);
+    ctx.fillText(text,origin.x-ctx.measureText(text).width-10,origin.y+32);
     //绘制X方向刻度
     var avgWidth = (cw - 2*padding - 50)/(key.length-1);
     for(var i=0;i<key.length;i++){
@@ -76,8 +76,9 @@ function drawLine(chart,value,name,key){
             ctx.moveTo(origin.x+i*avgWidth,origin.y);
             ctx.lineTo(origin.x+i*avgWidth,origin.y-10);
         }
-        var txtWidth = ctx.measureText(key[i]).width;
-        ctx.fillText(key[i],origin.x+i*avgWidth-txtWidth/2,origin.y+32);
+        var tmp = key[i].substring(key[i].lastIndexOf("/")+1);
+        var txtWidth = ctx.measureText(tmp).width;
+        ctx.fillText(tmp,origin.x+i*avgWidth-txtWidth/2,origin.y+32);
     }
     //绘制Y方向刻度
     var max = Math.max.apply(null,value.join(",").split(","));
@@ -108,10 +109,10 @@ function drawLine(chart,value,name,key){
 	        }
 	    }
 	    ctx.moveTo(labelX,padding/2-6);
-        ctx.lineTo(labelX+80,padding/2-6);
+        ctx.lineTo(labelX+40,padding/2-6);
         ctx.fillStyle="black";
-        ctx.fillText(name[k],labelX+90,padding/2);
-        labelX += 100 + ctx.measureText(name[k]).width;
+        ctx.fillText(name[k],labelX+43,padding/2);
+        labelX += 50 + ctx.measureText(name[k]).width;
         ctx.stroke();
     }	
 }
@@ -290,7 +291,7 @@ function dbGetValue(path,key,criteria) {
 	return res;
 }
 
-function add(){
+function addMovie(){
 	fs = new ActiveXObject("Scripting.FileSystemObject");
 	file = fs.openTextFile("d:/data/roominfo.txt", 2);
 	var brands = ["Zhangjiang","Global harbor","Zhongshan Park","East Nanjing Road"];
@@ -306,6 +307,46 @@ function add(){
 				file.writeLine(JSON.stringify(json));
 				i++;
 			}
+		}
+	}
+	file.close();
+}
+
+function addBox(){
+	function getNumber(mean,std_dev){    
+	    return mean+(distribution()*std_dev);
+	}
+
+	function distribution(){
+	    var sum=0.0;
+	    for(var i=0; i<12; i++){
+	        sum=sum+Math.random();
+	    }
+	    return sum-6.0;
+	}
+	var dis = {};
+	for(var i=0;i<1000000;i++){
+		var num = parseInt(getNumber(180, 10));
+		if(num in dis){
+			dis[num]++;
+		}else{
+			dis[num] = 1;
+		}
+	}
+	var movies = dbGetValue("D:/data/movieinfo.txt","movie",{"status":"present"});
+	fs = new ActiveXObject("Scripting.FileSystemObject");
+	file = fs.openTextFile("D:/data/boxinfo.txt", 2);
+	var num = [161,185,179,197];
+	for(var i=0;i<movies.length;i++){
+		for(var j=1;j<=31;j++){
+			if(num[i] in dis){
+				var json = {"movie":movies[i],"date":"2017/7/"+j,"boxOffice":dis[num[i]]};
+				file.writeLine(JSON.stringify(json));
+			}else{
+				var json = {"movie":movies[i],"date":"2017/7/"+j,"boxOffice":40};
+				file.writeLine(JSON.stringify(json));
+			}
+			num[i]++;
 		}
 	}
 	file.close();
