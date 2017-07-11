@@ -229,7 +229,6 @@ function dbSearch(path,data){
 //		if(line == ""){
 //			continue;
 //		}
-		console.log(line);
 		for(var key in data){
 			if(JSON.parse(line)[key] != data[key]){
 				flag = 1;
@@ -287,7 +286,9 @@ function dbGetValue(path,key,criteria) {
 			res.push(find[i][key]);
 		}
 	}
-	res.sort();
+	res.sort(function(o1,o2){
+		return parseInt(o1) < parseInt(o2);
+	});
 	return res;
 }
 

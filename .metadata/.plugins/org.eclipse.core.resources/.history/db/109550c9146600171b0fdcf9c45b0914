@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+body{
+	text-align: center;
+}
+
+.movie{
+	width:480
+	height:320
+}

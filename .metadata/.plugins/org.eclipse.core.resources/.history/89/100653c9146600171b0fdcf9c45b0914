@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+
+.seat{
+	width:30
+	height:20
+}

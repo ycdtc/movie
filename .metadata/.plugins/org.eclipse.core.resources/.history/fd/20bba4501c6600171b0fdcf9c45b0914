@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css" />
+<link rel="stylesheet" href="stylesheet/customer.css" />
+</head>
+<body>
+</body>
+<script>
+var moviePath = "D:/data/movieinfo.txt";
+var roomPath = "D:/data/roominfo.txt";
+$(function(){
+	var movies = dbSearch(moviePath, {"status":"present"});
+	for(var i=0;i<movies.length;i++){
+		$("body").append($("<img class='movie' id='"+ movies[i].movie +"' src='movie/"+ movies[i].movie +".jpg'/>"));
+	}
+	$("img").click(function(){
+		$("body").empty();
+		var movie = $(this).attr("id");
+		console.log(movie);
+		var brands = dbGetValue(roomPath, "brand", {"movie":movie});
+		for(var i=0;i<brands.length;i++){
+			$("body").append($("<button>"+ brands[i] +"</button>"));
+		}
+		$("button").click(function(){
+			$("body").empty();
+			var brand = $(this).html();
+			var times = dbGetValue(roomPath, "time", {"movie":movie,"brand":brand});
+			for(var i=0;i<times.length;i++){
+				var rooms = dbSearch(roomPath, {"movie":movie,"brand":brand,"time":times[i]});
+				for(var j=0;j<rooms.length;j++){
+					$("body").append($("<button>"+ times[i] + ' ' + rooms[j].room +"</button>"));
+				}
+			}
+			$("button").click(function(){
+				$("body").empty();
+				var time = $(this).html().split(" ")[0];
+				var room = $(this).html().split(" ")[1];
+				var seats = dbSearch(roomPath, {"movie":movie,"brand":brand,"time":time,"rooms":room})[0].seats;
+				for(var i=0;i<seats.length;i++){
+					for(var j=0;j<seats[i].length;j++){
+						if(seats[i][j] == 0){
+							$("body").append("<img class='seat' id='"+ i + "-" + j +"' src='movie/empty.png'/>");
+						}else{
+							$("body").append("<img class='seat' id='"+ i + "-" + j +"' src='movie/taken.png'/>");							
+						}
+					}
+					$("body").append("<br/>");
+				}
+				$("img").click(function(){
+					$(this).attr({"src":"movie/taken.png"});
+				});
+				$("body").append("<button id='commit'>commit</button>");
+				$("#commit").click(function(){
+					for(var i=0;i<seats.length;i++){
+						for(var j=0;j<seats.length;j++){
+							if($("#" + i + "-" + j).attr("src") == 'movie/taken.png'){
+								seats[i][j] = 1;
+							}
+						}
+					}					
+					dbUpdate(roomPath, {"movie":movie,"brand":brand,"time":time},{"seats":seats});
+					alert("success");
+				});
+			});
+		})		
+	})
+});
+
+
+</script>
+</html>

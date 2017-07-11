@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css" />
+</head>
+<body>
+<h2>To:</h2>
+<input id="to" type="text" />
+<h2>Message:</h2>
+<textarea id="message"></textarea>
+<div>
+<button id="sned">send</button>
+</div>
+</body>
+<script>
+$("#send").click(function(e){
+	var from = getRequest()["id"];
+	var json = {"from":from,"to":$("to").val(),"message":$("message").html()};
+	dbAdd("D:/data/message.txt", json);
+	self.close();
+	
+});
+</script>
+</html>

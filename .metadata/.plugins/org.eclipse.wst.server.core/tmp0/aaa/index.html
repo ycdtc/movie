@@ -16,14 +16,15 @@
 	$("#submit").click(function(e){
 
 		if($("#username").val() == "hr"){
-			location.href = "hr.html";
+			location.href = "hr.html?id=hr";
 		}else if($("#username").val() == "market"){
-			location.href = "market.html";
+			location.href = "market.html?id=market";
 		}else if($("#username").val() == "sales"){
-			location.href = "sales.html";
+			location.href = "sales.html?id=sales";
 		}else if($("#username").val() == "finance"){
-			location.href = "finance.html";
+			location.href = "finance.html?id=finance";
 		}else{
+			location.href = "customer.html";
 			//location.href = "control.html";
 		}
 	});

@@ -12,11 +12,22 @@
 <button id="boxoffice">box office</button>
 <button id="seecomment">see comment</button>
 <button id="schedulemovie">schedule movie</button>
+<button id="send">send message</button>
 <div id="res"></div>
 <script type="text/javascript">
 var path = "D:/data/roominfo.txt";
 var moviePath = "D:/data/movieinfo.txt";
 var boxPath = "D:/data/boxinfo.txt";
+var msgPath = "D:/data/message.txt";
+$(function(e){
+	var message = dbSearch(msgPath, {"to":getRequest()["id"]});
+	for(var i=0;i<message.length;i++){
+		console.log(JSON.stringify(message[i]));
+		alert("from:" + message[i].from + "\r\n" + message[i].message);
+		dbRemove(msgPath, message[i]);
+	}
+});
+
 $("#boxoffice").click(function(){
 	$("#res").empty();
 	var movies = dbGetValue(moviePath,"movie",{"status":"present"});
@@ -95,10 +106,14 @@ $("#schedulemovie").click(function(){
 				var select = $("#line" + i + " select");
 				dbAdd(path,{"brand":brand, "room":room[i],"seats":seats[i],"time":input[0].value,"movie":select[0].value,"price":parseFloat(input[1].value)});
 			}
+			alert("success");
 		});
 	})
 });
 
+$("#send").click(function(){
+	window.open("message.html?id=" + getRequest()["id"], 'newwindow', 'height=600, width=800');
+});
 </script>
 </body>
 </html>

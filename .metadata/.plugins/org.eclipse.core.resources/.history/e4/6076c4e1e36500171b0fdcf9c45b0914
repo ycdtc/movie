@@ -1,0 +1,33 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css" />
+<link rel="stylesheet" href="stylesheet/index.css" />
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Welcome</h1>
+<input id="username" type="text" placeholder = "username"/>
+<input id="password" type="password" placeholder = "password"/>
+<button id="submit">submit</button>
+</body>
+<script>
+	$("#submit").click(function(e){
+
+		if($("#username").val() == "hr"){
+			location.href = "hr.html";
+		}else if($("#username").val() == "market"){
+			location.href = "market.html";
+		}else if($("#username").val() == "sales"){
+			location.href = "sales.html";
+		}else if($("#username").val() == "finance"){
+			location.href = "finance.html";
+		}else{
+			//location.href = "control.html";
+		}
+	});
+	
+	
+</script>
+</html>
