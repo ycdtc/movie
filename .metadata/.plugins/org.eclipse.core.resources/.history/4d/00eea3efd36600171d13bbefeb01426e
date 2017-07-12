@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hr</title>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css"/>
+<link rel="stylesheet" href="stylesheet/sales.css"/>
+</head>
+<body>
+<button id="send">send message</button>
+<button id="view">view seat rate</button>
+<button id="arrange">arrange work</button>
+<div id="res"></div>
+</body>
+<script type="text/javascript">
+var path = "D:/data/roominfo.txt";
+var employeePath = "D:/data/employee.txt";
+var arrangePath = "D:/data/arrange.txt";
+var msgPath = "D:/data/message.txt";
+$(function(e){
+	var message = dbSearch(msgPath, {"to":getRequest()["id"]});
+	for(var i=0;i<message.length;i++){
+		console.log(JSON.stringify(message[i]));
+		alert("from:" + message[i].from + "\r\n" + message[i].message);
+		dbRemove(msgPath, message[i]);
+	}
+});
+
+$("#view").click(function(){
+
+	
+	
+	
+});
+
+$("#arrange").click(function(){
+	$("#res").empty();
+	var employees = dbGetValue(employeePath, "name", {"free":1});
+	var brands = dbGetValue(path, "brand");
+	$("#res").append($("<select id='select'><option selected='selected' disabled='disabled'></option></select>"));
+	for(var i=0;i<brands.length;i++){
+		$("#select").append($("<option>" + brands[i] +"</option>"));
+	}
+	$("#res").append($("<div id='table'></div>"));
+	$("#select").change(function(){
+		var num = 0;
+		$("#table").empty();
+		var brand = $("#select option:selected").html();
+		var rooms = dbGetValue(path, "room");		
+		for(var i=0;i<rooms.length;i++){
+			var res = dbSearch(path, {"brand":brand,"room":rooms[i]});
+			res.sort(function(o1,o2){
+				return o1.time < o2.time;
+			});
+			$("#table").append($("<tr><td rowspan='" + (res.length+1) +"'>" + rooms[i] +"</td><td>time</td><td>name</td></tr>"));
+			for(var j=0;j<res.length;j++){
+				$("#table").append($("<tr id='line"+ num +"'><td>"+ res[j].time +"</td><td><select></select></td></tr>"));
+				var exist = dbSearch(arrangePath,{"brand":res[j].brand,"room":res[j].room,"time":res[j].time});
+				var employee = "";
+				if(exist.length > 0){
+					employee = exist[0].name;
+				}else{
+					employee = employees[parseInt(Math.random()*employees.length)];
+				}
+				for(var k=0;k<=employees.length;k++){
+					if(k == employees.length){
+						$("#line" + num + " select").append("<option></option>");
+					}else	if(employees[k] == employee){
+						$("#line" + num + " select").append("<option selected='selected'>"+ employees[k] +"</option>");
+					}else{
+						$("#line" + num + " select").append("<option>"+ movies[k] +"</option>");
+					}
+				}
+				num++;
+			}
+		}		
+	});
+	$("#table").append("<button id='save'>save</button>");
+	$("#save").click(function(){
+		dbRemove(arrangePath,{"brand":brand});
+		for(var i=0;i<num;i++){
+			var select = $("#line" + i + " select");
+			var time = $("#line" + i + " td");
+			dbAdd(arrangePath,{"brand":brand, "room":room[i],"time":time[0].html(),"name":select[0].value});
+		}
+		alert("success");
+	});
+});
+
+$("#send").click(function(){
+	window.open("message.html?id=" + getRequest()["id"], 'newwindow', 'height=600, width=800');
+});
+</script>
+</html>

@@ -230,6 +230,7 @@ function dbSearch(path,data){
 //			continue;
 //		}
 		for(var key in data){
+			console.log(line);
 			if(JSON.parse(line)[key] != data[key]){
 				flag = 1;
 			}

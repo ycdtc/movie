@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hr</title>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css"/>
+<link rel="stylesheet" href="stylesheet/hr.css"/>
+</head>
+<body>
+<button id="send">send message</button>
+<button id="view">view seat rate</button>
+<button id="arrange">arrange work</button>
+<div id="res"></div>
+</body>
+<script type="text/javascript">
+var path = "D:/data/roominfo.txt";
+var employeePath = "D:/data/employee.txt";
+var arrangePath = "D:/data/arrange.txt";
+var msgPath = "D:/data/message.txt";
+$(function(e){
+	var message = dbSearch(msgPath, {"to":getRequest()["id"]});
+	for(var i=0;i<message.length;i++){
+		console.log(JSON.stringify(message[i]));
+		alert("from:" + message[i].from + "\r\n" + message[i].message);
+		dbRemove(msgPath, message[i]);
+	}
+});
+
+function show(chart,json){
+	$(chart).append($("<h2>"+ json.room +"</h2>"));
+	var seats = json.seats;
+	for(var i=0;i<seats.length;i++){
+		for(var j=0;j<seats[i].length;j++){
+			if(seats[i][j] == 0){
+				$(chart).append("<img class='seat' id='"+ i + "-" + j +"' src='movie/empty.png'/>");
+			}else{
+				$(chart).append("<img class='seat' id='"+ i + "-" + j +"' src='movie/taken.png'/>");							
+			}
+		}
+		$(chart).append("<br/>");
+	}
+}
+
+$("#view").click(function(){
+	$("#res").empty();
+	var brands = dbGetValue(path, "brand");
+	$("#res").append($("<select id='select'><option selected='selected' disabled='disabled'></option></select>"));
+	for(var i=0;i<brands.length;i++){
+		$("#select").append($("<option>" + brands[i] +"</option>"));
+	}
+	$("#res").append($("<div id='btns'></div>"));
+	$("#select").change(function(){
+		$('#btns').empty();
+		var brand = $("#select option:selected").html();
+		var times = dbGetValue(path, "time",{"brand":brand});
+		console.log(times.join(","));
+		for(var i=0;i<times.length;i++){
+			$('#btns').append("<button>"+ times[i] +"</button>");
+		}
+		$('#btns button').click(function(){
+			var seats = dbSearch(path, {"brand":brand,"time":$(this).html()});
+			var i = 0;
+			$("#res").append($("<img id='left' src='movie/left.png'/>"));
+			$("#res").append($("<div id='chart'></div>"));
+			$("#res").append($("<img id='right' src='movie/right.png'/>"));
+			$('left').click(function(){
+				if(i>0){
+					i--;
+				}else{
+					i = seats.length-1;
+				}
+				show('#chart',seats[i]);
+			});
+			$('right').click(function(){
+				if(i<(seats.length-1)){
+					i++;
+				}else{
+					i = 0;
+				}
+				show('#chart',seats[i]);
+			});
+		});
+	});
+	
+});
+
+$("#arrange").click(function(){
+	$("#res").empty();
+	var employees = dbGetValue(employeePath, "name", {"free":1});
+	var brands = dbGetValue(path, "brand");
+	$("#res").append($("<select id='select'><option selected='selected' disabled='disabled'></option></select>"));
+	for(var i=0;i<brands.length;i++){
+		$("#select").append($("<option>" + brands[i] +"</option>"));
+	}
+	$("#res").append($("<table id='table'></table>"));
+	$("#select").change(function(){
+		var num = 0;
+		var room=[];
+		$("#table").empty();
+		var brand = $("#select option:selected").html();
+		var rooms = dbGetValue(path, "room");		
+		for(var i=0;i<rooms.length;i++){
+			var res = dbSearch(path, {"brand":brand,"room":rooms[i]});
+			res.sort(function(o1,o2){
+				return o1.time < o2.time;
+			});
+			$("#table").append($("<tr><td rowspan='" + (res.length+1) +"'>" + rooms[i] +"</td><td>time</td><td>name</td></tr>"));
+			for(var j=0;j<res.length;j++){
+				room.push(rooms[i]);
+				$("#table").append($("<tr id='line"+ num +"'><td>"+ res[j].time +"</td><td><select></select></td></tr>"));
+				var exist = dbSearch(arrangePath,{"brand":res[j].brand,"room":res[j].room,"time":res[j].time});
+				var employee = "";
+				if(exist.length > 0){
+					employee = exist[0].name;
+				}else{
+					employee = employees[parseInt(Math.random()*employees.length)];
+				}
+				for(var k=0;k<=employees.length;k++){
+					if(k == employees.length){
+						$("#line" + num + " select").append("<option></option>");
+					}else	if(employees[k] == employee){
+						$("#line" + num + " select").append("<option selected='selected'>"+ employees[k] +"</option>");
+					}else{
+						$("#line" + num + " select").append("<option>"+ employees[k] +"</option>");
+					}
+				}
+				num++;
+			}
+		}
+		$("#table").append("<button id='save'>save</button>");
+		$("#save").click(function(){
+			dbRemove(arrangePath,{"brand":brand});
+			for(var i=0;i<num;i++){
+				var select = $("#line" + i + " select");
+				var time = $("#line" + i + " td");
+				dbAdd(arrangePath,{"brand":brand, "room":room[i],"time":time[0].innerHTML,"name":select[0].value});
+			}
+			alert("success");
+		});
+	});
+});
+
+$("#send").click(function(){
+	window.open("message.html?id=" + getRequest()["id"], 'newwindow', 'height=600, width=800');
+});
+</script>
+</html>
