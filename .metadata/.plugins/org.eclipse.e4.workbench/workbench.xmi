@@ -129,7 +129,7 @@
       <children xsi:type="basic:PartSashContainer" xmi:id="_fBxHkGxJEeeMDeDPC4tmxg" selectedElement="_Y2BD4WwxEeeMDeDPC4tmxg" horizontal="true">
         <children xsi:type="basic:PartStack" xmi:id="_fBxHkWxJEeeMDeDPC4tmxg" elementId="PartStack@7ad9f7c1" containerData="3516" selectedElement="_efzC8GxJEeeMDeDPC4tmxg">
           <children xsi:type="basic:Part" xmi:id="_efzC8GxJEeeMDeDPC4tmxg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="index.html" iconURI="platform:/plugin/org.eclipse.wst.html.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.html.core.htmlsource.source&quot; name=&quot;index.html&quot; partName=&quot;index.html&quot; title=&quot;index.html&quot; tooltip=&quot;aaa/WebContent/index.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/aaa/WebContent/index.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;103&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3527&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.html.core.htmlsource.source&quot; name=&quot;index.html&quot; partName=&quot;index.html&quot; title=&quot;index.html&quot; tooltip=&quot;aaa/WebContent/index.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/aaa/WebContent/index.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3527&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
             <tags>Editor</tags>
             <tags>org.eclipse.wst.html.core.htmlsource.source</tags>
             <tags>removeOnHide</tags>
@@ -271,7 +271,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9o-Z8FVqEee9jN6sOpSEWw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_RCBZkGwlEeeMDeDPC4tmxg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_9Y8Z4FVqEee9jN6sOpSEWw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_HovCR2xiEeev1_p7LKRLdQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_9Y8Z4FVqEee9jN6sOpSEWw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9o-Z8VVqEee9jN6sOpSEWw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -301,7 +301,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9o_BAFVqEee9jN6sOpSEWw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_RCG5IGwlEeeMDeDPC4tmxg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_9Y7y21VqEee9jN6sOpSEWw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Ho5aUGxiEeev1_p7LKRLdQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_9Y7y21VqEee9jN6sOpSEWw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_9o_BAVVqEee9jN6sOpSEWw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
