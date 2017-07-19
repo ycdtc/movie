@@ -1,9 +1,0 @@
-@CHARSET "UTF-8";
-body{
-	text-align: center;
-}
-
-.movie{
-	width:120
-	height:80
-}

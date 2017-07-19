@@ -26,7 +26,7 @@
 		}else if($("#username").val() == "customer.html"){
 			location.href = "customer.html";
 		}else{
-			location.href = "control.html?id=" + $("#username").val();
+			location.href = "control.html";
 		}
 	});
 	

@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.status{
+	color:green;
+}
+#info{
+	float:left;
+	width:400px;
+	height:300px;
+	border:1px solid black;
+	text-align:left;
+}
+#control{
+	float:left;
+	
+}
+

@@ -49,9 +49,9 @@ $(function(e){
 	var s = "your work today:\r\n";
 	arrange.sort(function(o1,o2){
 		if(o1.time < o2.time){
-			return -1;
-		}else{
 			return 1;
+		}else{
+			return -1;
 		}
 	});
 	
@@ -90,7 +90,6 @@ $(function(e){
 			$("#control").append("<p id='show'></p>");
 			$("#control").append("Projector: <label class='status'>Normal</label><br/>");
 			$("#control").append("Broadcast: <label class='status'>Normal</label>");
-			find();
 			setInterval(find,1000);
 		});	
 	});

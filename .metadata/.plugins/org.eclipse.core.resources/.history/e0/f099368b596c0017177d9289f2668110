@@ -17,8 +17,7 @@ var path = "D:/data/roominfo.txt";
 var employeePath = "D:/data/employee.txt";
 var arrangePath = "D:/data/arrange.txt";
 var msgPath = "D:/data/message.txt";
-var movies;
-function find(){
+function find(movies){
 	var date = new Date();
 	var hour = date.getHours();
 	var min = date.getMinutes();
@@ -28,7 +27,7 @@ function find(){
 	for(var i=0;i<movies.length;i++){
 		var time = movies[i].time.split("-");
 		var tmp1 = new Date(day + " " + time[0]);
-		var tmp2 = new Date(day + " " + time[1]);	
+		var tmp2 = new Date(day + " " + time[1]);
 		console.log(movies[i].time + "   "+ tmp1 + "   "+ tmp2 + "   "+ date);
 		if((date - tmp1) >= 0 && (date-tmp2) <= 0){
 			date.setHours(hour-tmp1.getHours());
@@ -38,23 +37,15 @@ function find(){
 	}
 	
 	if(index == movies.length){
-		$("#show").html("No movie is on the show");
+		$("#show").append("No movie is on the show");
 	}else{
-		$("#show").html("Now showing: " + movies[index].movie + "\r\n" + date.toLocaleTimeString());		
+		$("#show").append("Now showing: " + movies[index].movie + "\r\n" + date.toLocaleTimeString());		
 	}
 }
 
 $(function(e){
 	var arrange = dbSearch(arrangePath, {"name":getRequest()["id"]});
 	var s = "your work today:\r\n";
-	arrange.sort(function(o1,o2){
-		if(o1.time < o2.time){
-			return -1;
-		}else{
-			return 1;
-		}
-	});
-	
 	for(var i=0;i<arrange.length;i++){
 		s = s + "  " + arrange[i].time + "  " + arrange[i].brand + "  " + arrange[i].room + "  \r\n";
 	}
@@ -73,25 +64,22 @@ $(function(e){
 	}
 	$("#select").change(function(){
 		$('#res').empty();
-		$('#res').append("<div id='btns'></div><div id='auto'></div>");
+		$('#res').append("<div id='btns'></div><div id='info'></div><div id='control'></div>");
 		var brand = $("#select option:selected").html();
 		var rooms = dbGetValue(path, "room",{"brand":brand});
 		for(var i=0;i<rooms.length;i++){
 			$("#btns").append($("<button>"+ rooms[i] +"</button>"));
 		}
 		$('button').click(function(e){
-			$("#auto").empty();
-			$("#auto").append("<div id='info'></div><div id='control'></div>");
 			var room = $(this).html();
-			movies = dbSearch(path, {"brand":brand,"room":room});
+			var movies = dbSearch(path, {"brand":brand,"room":room});
 			for(var i=0;i<movies.length;i++){
 				$("#info").append("<p>"+ movies[i].time + "  " + movies[i].movie +"</p>");
 			}
 			$("#control").append("<p id='show'></p>");
-			$("#control").append("Projector: <label class='status'>Normal</label><br/>");
+			$("#control").append("Projector: <label class='status'>Normal</label>");
 			$("#control").append("Broadcast: <label class='status'>Normal</label>");
-			find();
-			setInterval(find,1000);
+			setInterval(find(movies),1000);
 		});	
 	});
 });

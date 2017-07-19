@@ -23,9 +23,10 @@
 			location.href = "sales.html?id=sales";
 		}else if($("#username").val() == "finance"){
 			location.href = "finance.html?id=finance";
-		}else{
+		}else if($("#username").val() == "customer.html"){
 			location.href = "customer.html";
-			//location.href = "control.html";
+		}else{
+			location.href = "control.html?id=" + $("#username").val();
 		}
 	});
 	
