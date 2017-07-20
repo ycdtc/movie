@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+a{color:blue;text-decoration:underline;margin-left:30px;cursor:pointer} 
+a:hover{color:green;}
+#list{
+	width:600px;
+	text-align:left;
+	border:1px solid black;
+	margin:10px auto;
+	font-size:20px;
+}
+#send{
+	margin-left:600px;
+}

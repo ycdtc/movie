@@ -353,3 +353,27 @@ function addBox(){
 	}
 	file.close();
 }
+
+function addFinance(){
+	fs = new ActiveXObject("Scripting.FileSystemObject");
+	file = fs.openTextFile("D:/data/finance.txt", 2);
+	var types1 = ["ticket","food","advertisement"];
+	var types2 = ["salary","maintain"];
+	var nums = [1000,2000,500,300,200];
+	var k=0;
+	for(var i=0;i<types1.length;i++){
+		for(var j=1;j<=31;j++){
+			var json = {"type":types1[i],"date":"2017/7/"+j,"income":"1","amount":parseInt(Math.random()*nums[k] + nums[k])};
+			file.writeLine(JSON.stringify(json));
+		}
+		k++;
+	}
+	for(var i=0;i<types2.length;i++){
+		for(var j=1;j<=31;j++){
+			var json = {"type":types2[i],"date":"2017/7/"+j,"income":"0","amount":parseInt(Math.random()*nums[k] + nums[k])};
+			file.writeLine(JSON.stringify(json));
+		}
+		k++;
+	}
+	file.close();
+}
