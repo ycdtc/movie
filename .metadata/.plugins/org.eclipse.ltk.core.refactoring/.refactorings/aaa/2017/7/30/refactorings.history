@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;aaa/WebContent/movie/New Happy Dad Son2.jpg&apos; to &apos;New Happy Dad Son 2.jpg&apos;" description="Rename resource &apos;New Happy Dad Son2.jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/movie/New Happy Dad Son2.jpg" name="New Happy Dad Son 2.jpg" stamp="1500970413319" updateReferences="true"/>
+</session>

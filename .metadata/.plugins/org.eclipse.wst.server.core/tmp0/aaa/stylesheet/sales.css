@@ -5,7 +5,7 @@
 	margin:10 auto;
 }
 
-.chart{
+.chart,.comment{
 	height:600;
 	width:800;
 }

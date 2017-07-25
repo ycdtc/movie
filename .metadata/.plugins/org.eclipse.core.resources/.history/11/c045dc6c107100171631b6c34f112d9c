@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css" />
+<link rel="stylesheet" href="stylesheet/finance.css" />
+</head>
+<body>
+	<button id="send">send message</button>
+	<div id="list"></div>
+	<div id='chart'></div>
+</body>
+<script type="text/javascript">
+var moviePath = "D:/data/movieinfo.txt";
+var msgPath = "D:/data/message.txt";
+var dic = {"New Happy Dad Son 2":["Despicable Me 3","Three Little Pigs Ⅱ"],"Justice League":["Transformers","Spider-Man","Wonder Woman"]};
+
+$(function(e){
+	var message = dbSearch(msgPath, {"to":getRequest()["id"]});
+	for(var i=0;i<message.length;i++){
+		console.log(JSON.stringify(message[i]));
+		alert("from:" + message[i].from + "\r\n" + message[i].message);
+		dbRemove(msgPath, message[i]);
+	}
+	var movies = dbGetValue(moviePath, "movie", {"status":"future"});
+	for(var i=0;i<movies.length;i++){
+		$("#list").append($("<img src='movie/"+ movies[i] +".jpg'></img>"));
+	}
+	$("img").click(function(){
+		$("#chart").empty();
+		var movie = $(this).attr('src');
+		var targets = dic[movie];
+		$("#chart").append("<canvas id='can1' width='800' height='600'></canvas>");
+		var res = dbSearch(moviePath,{"movie":movie});
+		var value = [];
+		var name = res[0].sex. 
+		for(var i=0;i<targets;i++){
+			
+		}
+		$("#chart").append("<canvas id='can2' width='800' height='600'></canvas>");
+	});
+}
+	
+
+$("#send").click(function(){
+	window.open("message.html?id=" + getRequest()["id"], 'newwindow', 'height=600, width=800');
+});
+</script>
+</html>

@@ -42,7 +42,8 @@ function drawPie(chart,value,name){
 		end += value[i]/sum * 2 * Math.PI;
 		ctx.rotate(now + (end-start)/2);
 		now = (end-start)/2;
-		ctx.font = "24px";
+		//ctx.font = "28px";
+		ctx.font = "100em";
 		ctx.fillStyle = "white";
 		ctx.fillText(name[i], 60 , 0);
 	}
@@ -164,7 +165,7 @@ function drawRect(chart,value,key){
     	var height = value[i]/max*(ch-2*padding-50);
         ctx.beginPath();  
         ctx.fillStyle="#abcdef";  
-        ctx.rect(origin.x+(i+0.9)*avgWidth,origin.y-height,avgWidth/10,height);  
+        ctx.rect(origin.x+(i+0.75)*avgWidth,origin.y-height,avgWidth/2,height);  
         ctx.fill();  
         ctx.closePath();  
     }  

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/base.js"></script>
+<link rel="stylesheet" href="stylesheet/base.css" />
+<link rel="stylesheet" href="stylesheet/market.css" />
+</head>
+<body>
+	<button id="send">send message</button>
+	<div id="list"></div>
+	<div id='chart'></div>
+</body>
+<script type="text/javascript">
+var moviePath = "D:/data/movieinfo.txt";
+var msgPath = "D:/data/message.txt";
+var dic = {"New Happy Dad Son 2":["Despicable Me 3","Three Little Pigs Ⅱ"],"Justice League":["Transformers","Spider-Man","Wonder Woman"]};
+
+$(function(e){
+	var message = dbSearch(msgPath, {"to":getRequest()["id"]});
+	for(var i=0;i<message.length;i++){
+		console.log(JSON.stringify(message[i]));
+		alert("from:" + message[i].from + "\r\n" + message[i].message);
+		dbRemove(msgPath, message[i]);
+	}
+	var movies = dbGetValue(moviePath, "movie", {"status":"future"});
+	for(var i=0;i<movies.length;i++){
+		$("#list").append($("<img class='movie' id='"+ movies[i] +"' src='movie/"+ movies[i] +".jpg'></img>"));
+	}
+	$("img").click(function(){
+		$("#chart").empty();
+		var movie = $(this).attr("id");
+		var targets = dic[movie];
+		$("#chart1").append("<canvas id='can1' width='800' height='600'></canvas>");
+		var len = targets.length;
+		var value,name;
+		for(var i=0;i<len;i++){
+			var target = dbSearch(moviePath,{"movie":targets[i]})[0];
+			if(i==0){
+				name = Object.keys(target.sex);
+				value = Object.values(target.sex);
+				for(var j=0;j<value.length;j++){
+					value[j] /= len;
+				}
+			}else{
+				var tmp = Object.values(target.sex);
+				for(var j=0;j<tmp.length;j++){
+					value[j] += tmp[j]/len;
+				}
+			}
+		}
+		drawPie("can1",value,name);
+		$("#chart2").append("<canvas id='can2' width='800' height='600'></canvas>");
+		for(var i=0;i<len;i++){
+			var target = dbSearch(moviePath,{"movie":targets[i]})[0];
+			if(i==0){
+				name = Object.keys(target.age);
+				value = Object.values(target.age);
+				for(var j=0;j<value.length;j++){
+					value[j] /= len;
+				}
+			}else{
+				var tmp = Object.values(target.sex);
+				for(var j=0;j<tmp.length;j++){
+					value[j] += tmp[j]/len;
+				}
+			}
+		}
+		drawRect("can2",value,name);
+	});
+})
+	
+
+$("#send").click(function(){
+	window.open("message.html?id=" + getRequest()["id"], 'newwindow', 'height=600, width=800');
+});
+</script>
+</html>
