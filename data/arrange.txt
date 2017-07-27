@@ -1,0 +1,48 @@
+{"brand":"Global harbor","room":"Room1","time":"09:00-11:00","name":"Tony"}
+{"brand":"Global harbor","room":"Room1","time":"13:00-15:00","name":"Mike"}
+{"brand":"Global harbor","room":"Room1","time":"15:00-17:00","name":"Tom"}
+{"brand":"Global harbor","room":"Room1","time":"19:00-21:00","name":"Tony"}
+{"brand":"Global harbor","room":"Room2","time":"09:00-11:00","name":"Mary"}
+{"brand":"Global harbor","room":"Room2","time":"13:00-15:00","name":"Charles"}
+{"brand":"Global harbor","room":"Room2","time":"15:00-17:00","name":"Mary"}
+{"brand":"Global harbor","room":"Room2","time":"19:00-21:00","name":"Mike"}
+{"brand":"Global harbor","room":"Room3","time":"09:00-11:00","name":"Mary"}
+{"brand":"Global harbor","room":"Room3","time":"13:00-15:00","name":"Tom"}
+{"brand":"Global harbor","room":"Room3","time":"15:00-17:00","name":"Tom"}
+{"brand":"Global harbor","room":"Room3","time":"19:00-21:00","name":"Mike"}
+{"brand":"Zhongshan Park","room":"Room1","time":"09:00-11:00","name":"Tony"}
+{"brand":"Zhongshan Park","room":"Room1","time":"13:00-15:00","name":"Charles"}
+{"brand":"Zhongshan Park","room":"Room1","time":"15:00-17:00","name":"Charles"}
+{"brand":"Zhongshan Park","room":"Room1","time":"19:00-21:00","name":"Charles"}
+{"brand":"Zhongshan Park","room":"Room2","time":"09:00-11:00","name":"Tom"}
+{"brand":"Zhongshan Park","room":"Room2","time":"13:00-15:00","name":"Tom"}
+{"brand":"Zhongshan Park","room":"Room2","time":"15:00-17:00","name":"Tom"}
+{"brand":"Zhongshan Park","room":"Room2","time":"19:00-21:00","name":"Tony"}
+{"brand":"Zhongshan Park","room":"Room3","time":"09:00-11:00","name":"Tom"}
+{"brand":"Zhongshan Park","room":"Room3","time":"13:00-15:00","name":"Mary"}
+{"brand":"Zhongshan Park","room":"Room3","time":"15:00-17:00","name":"Charles"}
+{"brand":"Zhongshan Park","room":"Room3","time":"19:00-21:00","name":"Tony"}
+{"brand":"East Nanjing Road","room":"Room1","time":"09:00-11:00","name":"Mary"}
+{"brand":"East Nanjing Road","room":"Room1","time":"13:00-15:00","name":"Tony"}
+{"brand":"East Nanjing Road","room":"Room1","time":"15:00-17:00","name":"Mike"}
+{"brand":"East Nanjing Road","room":"Room1","time":"19:00-21:00","name":"Mary"}
+{"brand":"East Nanjing Road","room":"Room2","time":"09:00-11:00","name":"Mike"}
+{"brand":"East Nanjing Road","room":"Room2","time":"13:00-15:00","name":"Mary"}
+{"brand":"East Nanjing Road","room":"Room2","time":"15:00-17:00","name":"Tom"}
+{"brand":"East Nanjing Road","room":"Room2","time":"19:00-21:00","name":"Tom"}
+{"brand":"East Nanjing Road","room":"Room3","time":"09:00-11:00","name":"Mary"}
+{"brand":"East Nanjing Road","room":"Room3","time":"13:00-15:00","name":"Mary"}
+{"brand":"East Nanjing Road","room":"Room3","time":"15:00-17:00","name":"Charles"}
+{"brand":"East Nanjing Road","room":"Room3","time":"19:00-21:00","name":"Mary"}
+{"brand":"Zhangjiang","room":"Room1","time":"09:00-11:00","name":"Charles"}
+{"brand":"Zhangjiang","room":"Room1","time":"13:00-15:00","name":"Mary"}
+{"brand":"Zhangjiang","room":"Room1","time":"15:00-17:00","name":"Tony"}
+{"brand":"Zhangjiang","room":"Room1","time":"19:00-21:00","name":"Tony"}
+{"brand":"Zhangjiang","room":"Room2","time":"09:00-11:00","name":"Mary"}
+{"brand":"Zhangjiang","room":"Room2","time":"13:00-15:00","name":"Charles"}
+{"brand":"Zhangjiang","room":"Room2","time":"15:00-17:00","name":"Tony"}
+{"brand":"Zhangjiang","room":"Room2","time":"19:00-21:00","name":"Charles"}
+{"brand":"Zhangjiang","room":"Room3","time":"09:00-11:00","name":"Mike"}
+{"brand":"Zhangjiang","room":"Room3","time":"13:00-15:00","name":"Mary"}
+{"brand":"Zhangjiang","room":"Room3","time":"15:00-17:00","name":"Tom"}
+{"brand":"Zhangjiang","room":"Room3","time":"19:00-21:00","name":"Tom"}

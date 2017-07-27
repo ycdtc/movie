@@ -1,0 +1,8 @@
+{"movie":"Despicable Me 3","status":"present","box office":2365,"sex":{"man":4250,"woman":5750},"age":{"0-15":1500,"15-25":4000,"25-40":2000,"40-60":1000,"60+":500}}
+{"movie":"Spider-Man","status":"present","box office":4547,"sex":{"man":4880,"woman":5120},"age":{"0-15":500,"15-25":2000,"25-40":3000,"40-60":1000,"60+":500}}
+{"movie":"Transformers","status":"present","box office":9105,"sex":{"man":5190,"woman":4810},"age":{"0-15":500,"15-25":3000,"25-40":3000,"40-60":2000,"60+":1000}}
+{"movie":"War of the Planet of the Apes","status":"present","box office":1136,"sex":{"man":6620,"woman":3380},"age":{"0-15":500,"15-25":1000,"25-40":1000,"40-60":2000,"60+":1500}}
+{"movie":"Wonder Woman","status":"past","box office":5169,"sex":{"man":4870,"woman":5130},"age":{"0-15":500,"15-25":2000,"25-40":2500,"40-60":1000,"60+":1000}}
+{"movie":"Three Little Pigs ¢ò","status":"past","box office":200,"sex":{"man":3120,"woman":6880},"age":{"0-15":1000,"15-25":1000,"25-40":500,"40-60":300,"60+":300}}
+{"movie":"New Happy Dad Son 2","status":"future"}
+{"movie":"Justice League","status":"future"}

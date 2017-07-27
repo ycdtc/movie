@@ -1,12 +1,4 @@
 @CHARSET "UTF-8";
-body{
-	text-align: center;
-}
-
-.movie{
-	width:220px
-}
-
 #table{
 	border-collapse:collapse;
 	margin:10px auto;
@@ -14,4 +6,9 @@ body{
 }
 td{
 	border: 1px solid blue;  
+}
+
+.chart,.comment{
+	height:600;
+	width:800;
 }

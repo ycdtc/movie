@@ -1,0 +1,124 @@
+{"movie":"Despicable Me 3","date":"2017/7/1","boxOffice":7465}
+{"movie":"Despicable Me 3","date":"2017/7/2","boxOffice":8960}
+{"movie":"Despicable Me 3","date":"2017/7/3","boxOffice":10474}
+{"movie":"Despicable Me 3","date":"2017/7/4","boxOffice":12363}
+{"movie":"Despicable Me 3","date":"2017/7/5","boxOffice":14268}
+{"movie":"Despicable Me 3","date":"2017/7/6","boxOffice":16362}
+{"movie":"Despicable Me 3","date":"2017/7/7","boxOffice":18549}
+{"movie":"Despicable Me 3","date":"2017/7/8","boxOffice":20817}
+{"movie":"Despicable Me 3","date":"2017/7/9","boxOffice":22949}
+{"movie":"Despicable Me 3","date":"2017/7/10","boxOffice":25539}
+{"movie":"Despicable Me 3","date":"2017/7/11","boxOffice":28064}
+{"movie":"Despicable Me 3","date":"2017/7/12","boxOffice":30267}
+{"movie":"Despicable Me 3","date":"2017/7/13","boxOffice":32394}
+{"movie":"Despicable Me 3","date":"2017/7/14","boxOffice":33992}
+{"movie":"Despicable Me 3","date":"2017/7/15","boxOffice":35879}
+{"movie":"Despicable Me 3","date":"2017/7/16","boxOffice":37307}
+{"movie":"Despicable Me 3","date":"2017/7/17","boxOffice":38231}
+{"movie":"Despicable Me 3","date":"2017/7/18","boxOffice":38984}
+{"movie":"Despicable Me 3","date":"2017/7/19","boxOffice":39265}
+{"movie":"Despicable Me 3","date":"2017/7/20","boxOffice":39321}
+{"movie":"Despicable Me 3","date":"2017/7/21","boxOffice":38745}
+{"movie":"Despicable Me 3","date":"2017/7/22","boxOffice":38133}
+{"movie":"Despicable Me 3","date":"2017/7/23","boxOffice":37472}
+{"movie":"Despicable Me 3","date":"2017/7/24","boxOffice":35852}
+{"movie":"Despicable Me 3","date":"2017/7/25","boxOffice":34100}
+{"movie":"Despicable Me 3","date":"2017/7/26","boxOffice":31926}
+{"movie":"Despicable Me 3","date":"2017/7/27","boxOffice":29949}
+{"movie":"Despicable Me 3","date":"2017/7/28","boxOffice":28115}
+{"movie":"Despicable Me 3","date":"2017/7/29","boxOffice":25463}
+{"movie":"Despicable Me 3","date":"2017/7/30","boxOffice":23077}
+{"movie":"Despicable Me 3","date":"2017/7/31","boxOffice":20910}
+{"movie":"Spider-Man","date":"2017/7/1","boxOffice":34100}
+{"movie":"Spider-Man","date":"2017/7/2","boxOffice":31926}
+{"movie":"Spider-Man","date":"2017/7/3","boxOffice":29949}
+{"movie":"Spider-Man","date":"2017/7/4","boxOffice":28115}
+{"movie":"Spider-Man","date":"2017/7/5","boxOffice":25463}
+{"movie":"Spider-Man","date":"2017/7/6","boxOffice":23077}
+{"movie":"Spider-Man","date":"2017/7/7","boxOffice":20910}
+{"movie":"Spider-Man","date":"2017/7/8","boxOffice":18313}
+{"movie":"Spider-Man","date":"2017/7/9","boxOffice":16428}
+{"movie":"Spider-Man","date":"2017/7/10","boxOffice":14231}
+{"movie":"Spider-Man","date":"2017/7/11","boxOffice":12452}
+{"movie":"Spider-Man","date":"2017/7/12","boxOffice":10497}
+{"movie":"Spider-Man","date":"2017/7/13","boxOffice":8822}
+{"movie":"Spider-Man","date":"2017/7/14","boxOffice":7429}
+{"movie":"Spider-Man","date":"2017/7/15","boxOffice":6187}
+{"movie":"Spider-Man","date":"2017/7/16","boxOffice":5018}
+{"movie":"Spider-Man","date":"2017/7/17","boxOffice":3999}
+{"movie":"Spider-Man","date":"2017/7/18","boxOffice":3184}
+{"movie":"Spider-Man","date":"2017/7/19","boxOffice":2524}
+{"movie":"Spider-Man","date":"2017/7/20","boxOffice":2001}
+{"movie":"Spider-Man","date":"2017/7/21","boxOffice":1480}
+{"movie":"Spider-Man","date":"2017/7/22","boxOffice":1146}
+{"movie":"Spider-Man","date":"2017/7/23","boxOffice":805}
+{"movie":"Spider-Man","date":"2017/7/24","boxOffice":636}
+{"movie":"Spider-Man","date":"2017/7/25","boxOffice":446}
+{"movie":"Spider-Man","date":"2017/7/26","boxOffice":318}
+{"movie":"Spider-Man","date":"2017/7/27","boxOffice":218}
+{"movie":"Spider-Man","date":"2017/7/28","boxOffice":137}
+{"movie":"Spider-Man","date":"2017/7/29","boxOffice":103}
+{"movie":"Spider-Man","date":"2017/7/30","boxOffice":63}
+{"movie":"Spider-Man","date":"2017/7/31","boxOffice":53}
+{"movie":"Transformers","date":"2017/7/1","boxOffice":39265}
+{"movie":"Transformers","date":"2017/7/2","boxOffice":39321}
+{"movie":"Transformers","date":"2017/7/3","boxOffice":38745}
+{"movie":"Transformers","date":"2017/7/4","boxOffice":38133}
+{"movie":"Transformers","date":"2017/7/5","boxOffice":37472}
+{"movie":"Transformers","date":"2017/7/6","boxOffice":35852}
+{"movie":"Transformers","date":"2017/7/7","boxOffice":34100}
+{"movie":"Transformers","date":"2017/7/8","boxOffice":31926}
+{"movie":"Transformers","date":"2017/7/9","boxOffice":29949}
+{"movie":"Transformers","date":"2017/7/10","boxOffice":28115}
+{"movie":"Transformers","date":"2017/7/11","boxOffice":25463}
+{"movie":"Transformers","date":"2017/7/12","boxOffice":23077}
+{"movie":"Transformers","date":"2017/7/13","boxOffice":20910}
+{"movie":"Transformers","date":"2017/7/14","boxOffice":18313}
+{"movie":"Transformers","date":"2017/7/15","boxOffice":16428}
+{"movie":"Transformers","date":"2017/7/16","boxOffice":14231}
+{"movie":"Transformers","date":"2017/7/17","boxOffice":12452}
+{"movie":"Transformers","date":"2017/7/18","boxOffice":10497}
+{"movie":"Transformers","date":"2017/7/19","boxOffice":8822}
+{"movie":"Transformers","date":"2017/7/20","boxOffice":7429}
+{"movie":"Transformers","date":"2017/7/21","boxOffice":6187}
+{"movie":"Transformers","date":"2017/7/22","boxOffice":5018}
+{"movie":"Transformers","date":"2017/7/23","boxOffice":3999}
+{"movie":"Transformers","date":"2017/7/24","boxOffice":3184}
+{"movie":"Transformers","date":"2017/7/25","boxOffice":2524}
+{"movie":"Transformers","date":"2017/7/26","boxOffice":2001}
+{"movie":"Transformers","date":"2017/7/27","boxOffice":1480}
+{"movie":"Transformers","date":"2017/7/28","boxOffice":1146}
+{"movie":"Transformers","date":"2017/7/29","boxOffice":805}
+{"movie":"Transformers","date":"2017/7/30","boxOffice":636}
+{"movie":"Transformers","date":"2017/7/31","boxOffice":446}
+{"movie":"War of the Planet of the Apes","date":"2017/7/1","boxOffice":8822}
+{"movie":"War of the Planet of the Apes","date":"2017/7/2","boxOffice":7429}
+{"movie":"War of the Planet of the Apes","date":"2017/7/3","boxOffice":6187}
+{"movie":"War of the Planet of the Apes","date":"2017/7/4","boxOffice":5018}
+{"movie":"War of the Planet of the Apes","date":"2017/7/5","boxOffice":3999}
+{"movie":"War of the Planet of the Apes","date":"2017/7/6","boxOffice":3184}
+{"movie":"War of the Planet of the Apes","date":"2017/7/7","boxOffice":2524}
+{"movie":"War of the Planet of the Apes","date":"2017/7/8","boxOffice":2001}
+{"movie":"War of the Planet of the Apes","date":"2017/7/9","boxOffice":1480}
+{"movie":"War of the Planet of the Apes","date":"2017/7/10","boxOffice":1146}
+{"movie":"War of the Planet of the Apes","date":"2017/7/11","boxOffice":805}
+{"movie":"War of the Planet of the Apes","date":"2017/7/12","boxOffice":636}
+{"movie":"War of the Planet of the Apes","date":"2017/7/13","boxOffice":446}
+{"movie":"War of the Planet of the Apes","date":"2017/7/14","boxOffice":318}
+{"movie":"War of the Planet of the Apes","date":"2017/7/15","boxOffice":218}
+{"movie":"War of the Planet of the Apes","date":"2017/7/16","boxOffice":137}
+{"movie":"War of the Planet of the Apes","date":"2017/7/17","boxOffice":103}
+{"movie":"War of the Planet of the Apes","date":"2017/7/18","boxOffice":63}
+{"movie":"War of the Planet of the Apes","date":"2017/7/19","boxOffice":53}
+{"movie":"War of the Planet of the Apes","date":"2017/7/20","boxOffice":19}
+{"movie":"War of the Planet of the Apes","date":"2017/7/21","boxOffice":18}
+{"movie":"War of the Planet of the Apes","date":"2017/7/22","boxOffice":7}
+{"movie":"War of the Planet of the Apes","date":"2017/7/23","boxOffice":5}
+{"movie":"War of the Planet of the Apes","date":"2017/7/24","boxOffice":3}
+{"movie":"War of the Planet of the Apes","date":"2017/7/25","boxOffice":2}
+{"movie":"War of the Planet of the Apes","date":"2017/7/26","boxOffice":1}
+{"movie":"War of the Planet of the Apes","date":"2017/7/27","boxOffice":40}
+{"movie":"War of the Planet of the Apes","date":"2017/7/28","boxOffice":40}
+{"movie":"War of the Planet of the Apes","date":"2017/7/29","boxOffice":40}
+{"movie":"War of the Planet of the Apes","date":"2017/7/30","boxOffice":40}
+{"movie":"War of the Planet of the Apes","date":"2017/7/31","boxOffice":1}

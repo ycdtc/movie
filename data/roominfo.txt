@@ -1,0 +1,48 @@
+{"brand":"Zhangjiang","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Zhangjiang","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Zhangjiang","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Zhangjiang","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Zhangjiang","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Zhangjiang","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,1,1,0,0],[0,1,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Zhangjiang","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Zhangjiang","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Zhangjiang","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Zhangjiang","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Zhangjiang","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Zhangjiang","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Zhongshan Park","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Zhongshan Park","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Zhongshan Park","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Zhongshan Park","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Zhongshan Park","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Zhongshan Park","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Zhongshan Park","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Zhongshan Park","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Zhongshan Park","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Zhongshan Park","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Zhongshan Park","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Zhongshan Park","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"East Nanjing Road","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,1,1,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":20}
+{"brand":"East Nanjing Road","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,1,1,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"East Nanjing Road","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"East Nanjing Road","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"East Nanjing Road","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,1,1,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"East Nanjing Road","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,1,1,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Despicable Me 3","price":35}
+{"brand":"East Nanjing Road","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Despicable Me 3","price":35}
+{"brand":"East Nanjing Road","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"East Nanjing Road","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,1,1,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"East Nanjing Road","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"East Nanjing Road","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":20}
+{"brand":"East Nanjing Road","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"Despicable Me 3","price":35}
+{"brand":"Global harbor","room":"Room1","seats":[[0,0,0,0,0],[0,1,1,0,0],[1,1,1,1,1],[1,1,1,1,1],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Global harbor","room":"Room1","seats":[[0,0,0,0,0],[0,1,1,0,0],[0,1,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Transformers","price":35}
+{"brand":"Global harbor","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Global harbor","room":"Room1","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Global harbor","room":"Room2","seats":[[0,0,0,0,0],[0,1,1,0,0],[1,1,0,0,0],[1,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Spider-Man","price":35}
+{"brand":"Global harbor","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":20}
+{"brand":"Global harbor","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":20}
+{"brand":"Global harbor","room":"Room2","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}
+{"brand":"Global harbor","room":"Room3","seats":[[0,0,0,0,0],[0,1,1,0,0],[1,1,0,0,0],[1,0,0,0,0],[0,0,0,0,0]],"time":"09:00-11:00","movie":"Despicable Me 3","price":35}
+{"brand":"Global harbor","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"13:00-15:00","movie":"Spider-Man","price":35}
+{"brand":"Global harbor","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"15:00-17:00","movie":"Transformers","price":35}
+{"brand":"Global harbor","room":"Room3","seats":[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],"time":"19:00-21:00","movie":"War of the Planet of the Apes","price":35}

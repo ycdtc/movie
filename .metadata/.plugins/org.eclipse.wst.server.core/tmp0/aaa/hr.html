@@ -99,7 +99,7 @@ $("#arrange").click(function(){
 	for(var i=0;i<brands.length;i++){
 		$("#select").append($("<option>" + brands[i] +"</option>"));
 	}
-	$("#res").append($("<table id='table'></table>"));
+	$("#res").append($("<div id='table'></div>"));
 	$("#select").change(function(){
 		var num = 0;
 		var room=[];

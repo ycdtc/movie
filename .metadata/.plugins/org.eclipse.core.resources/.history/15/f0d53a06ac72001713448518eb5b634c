@@ -1,4 +1,6 @@
 @CHARSET "UTF-8";
+
+
 .chart,.comment{
 	height:600;
 	width:800;

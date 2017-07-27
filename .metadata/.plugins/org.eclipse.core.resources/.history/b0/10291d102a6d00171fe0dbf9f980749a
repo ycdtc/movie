@@ -1,9 +1,0 @@
-@CHARSET "UTF-8";
-a{color:#333;text-decoration:none; } 
-a:hover{color:#CC3300;text-decoration:underline;}
-#list{
-	width:100px;
-	max-height:100px;
-	text-align:left;
-	border:1px solid black;
-}
