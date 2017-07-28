@@ -11,19 +11,8 @@ body{
 	border-collapse:collapse;
 	text-align: center;
 	margin:10px auto;
-	width:800;
+	width:800px;
 }
 td{
 	border: 1px solid blue;  
-}
-
-#send{
-	background-color:blue;
-	height:40px;
-    width:80px;
-    margin: 0 25px;
-}
-
-button{
-	background-color:#123456;
 }

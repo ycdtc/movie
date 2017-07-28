@@ -42,8 +42,7 @@ function drawPie(chart,value,name){
 		end += value[i]/sum * 2 * Math.PI;
 		ctx.rotate(now + (end-start)/2);
 		now = (end-start)/2;
-		//ctx.font = "28px";
-		ctx.font = "100em";
+		ctx.font = "28px";
 		ctx.fillStyle = "white";
 		ctx.fillText(name[i], 60 , 0);
 	}
